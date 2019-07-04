@@ -1,0 +1,13 @@
+package com.example.helloworld;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+@org.springframework.stereotype.Service
+public class Service {
+	@Autowired RestTemplate restTemplate;
+	
+	public String getHelloContent() {
+        return restTemplate.getForObject("http://config-client/",String.class);
+    }
+}

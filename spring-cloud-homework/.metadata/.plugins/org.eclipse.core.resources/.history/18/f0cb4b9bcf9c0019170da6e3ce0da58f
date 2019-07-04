@@ -1,0 +1,64 @@
+package com.example.helloworld;
+
+import javax.servlet.http.HttpServletResponse;
+
+import com.marcosbarbero.cloud.autoconfigure.zuul.ratelimit.config.RateLimiter;
+import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+import com.netflix.zuul.exception.ZuulException;
+import javax.servlet.http.HttpServletRequest;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
+
+public class RateLimitZuulFilter extends ZuulFilter {
+	private static final Logger LOGGER = LoggerFactory.getLogger(RateLimitZuulFilter.class);
+	
+	//初始化 放入 1000令牌/s  时间窗口为 1s
+	private final RateLimiter rateLimiter = RateLimiter.create(1000.0);
+ 
+	@Override
+	public boolean shouldFilter() {
+		// 一直过滤
+		return true;
+	}
+ 
+	@Override
+	public Object run() throws ZuulException {
+		
+		RequestContext ctx =  RequestContext.getCurrentContext();
+		HttpServletResponse response = ctx.getResponse();
+		
+		if(!rateLimiter.tryAcquire()) {
+			response.setContentType(MediaType.TEXT_PLAIN_VALUE);
+			response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
+			ctx.setSendZuulResponse(false);// 过滤该请求，不对其进行路由
+			try {
+				response.getWriter().write("TOO MANY REQUESTS");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}else {
+			ctx.setResponseStatusCode(200); 
+			LOGGER.info("OK !!!");
+		}
+		
+		return null;
+	}
+ 
+	@Override
+	public String filterType() {
+		return "pre";
+	}
+ 
+	@Override
+	public int filterOrder() {
+		
+		return -5;
+	}
+
+}

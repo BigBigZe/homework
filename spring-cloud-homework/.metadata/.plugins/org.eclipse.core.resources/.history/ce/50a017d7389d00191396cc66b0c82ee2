@@ -1,0 +1,10 @@
+spring.application.name=ribbon-server
+eureka.client.service-url.defaultZone=http://localhost:9001/eureka/
+server.port=8082
+zuul.routes.ribbon.path=/ribbon-server/**
+zuul.routes.ribbon.service-id=ribbon-server
+#zuul.ratelimit.enabled = true
+#zuul.ratelimit.repository = IN_MEMORY
+#zuul.ratelimit.policies.hms-cloud-infrastructure.limit = 2
+#zuul.ratelimit.policies.hms-cloud-infrastructure.quota = 1
+#zuul.ratelimit.policies.hms-cloud-infrastructure.refresh-interval = 3

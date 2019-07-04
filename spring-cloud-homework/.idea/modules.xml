@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/client-duplicate/.mvn/.mvn.iml" filepath="$PROJECT_DIR$/client-duplicate/.mvn/.mvn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ribbon-server/.mvn/.mvn1.iml" filepath="$PROJECT_DIR$/ribbon-server/.mvn/.mvn1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/.mvn/.mvn2.iml" filepath="$PROJECT_DIR$/client/.mvn/.mvn2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/.mvn/.mvn3.iml" filepath="$PROJECT_DIR$/config-server/.mvn/.mvn3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/.mvn/.mvn4.iml" filepath="$PROJECT_DIR$/zuul-server/.mvn/.mvn4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/.mvn/.mvn5.iml" filepath="$PROJECT_DIR$/server/.mvn/.mvn5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/src/main/main.iml" filepath="$PROJECT_DIR$/server/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ribbon-server/src/main/main1.iml" filepath="$PROJECT_DIR$/ribbon-server/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/src/main/main2.iml" filepath="$PROJECT_DIR$/config-server/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/src/main/main3.iml" filepath="$PROJECT_DIR$/client/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client-duplicate/src/main/main4.iml" filepath="$PROJECT_DIR$/client-duplicate/src/main/main4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/src/main/main5.iml" filepath="$PROJECT_DIR$/zuul-server/src/main/main5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/src/test/test.iml" filepath="$PROJECT_DIR$/zuul-server/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/src/test/test1.iml" filepath="$PROJECT_DIR$/server/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/src/test/test2.iml" filepath="$PROJECT_DIR$/config-server/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client-duplicate/src/test/test3.iml" filepath="$PROJECT_DIR$/client-duplicate/src/test/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ribbon-server/src/test/test4.iml" filepath="$PROJECT_DIR$/ribbon-server/src/test/test4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/client/src/test/test5.iml" filepath="$PROJECT_DIR$/client/src/test/test5.iml" />
+    </modules>
+  </component>
+</project>

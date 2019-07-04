@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="server"/>
+<aop-project name="client-duplicate"/>
+<aop-project name="config-server"/>
+<aop-project name="ribbon-server"/>
+<aop-project name="client"/>
+</aop-reference-model>
